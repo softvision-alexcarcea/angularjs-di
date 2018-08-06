@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="dependency injection AngularJS" />
+    <title>Dependency Injection in AngularJS (1.x)</title>
+  </head>
+  <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script type="text/javascript" src="di.js"></script>
+    <div data-ng-app="dependency-injection">
+      <div data-ng-controller="di-controller as vm">The {{::vm.type}} Factory</div>
+      <di-component name="Eduard Khil"></di-component>
+    </div>
+  </body>
+</html>
