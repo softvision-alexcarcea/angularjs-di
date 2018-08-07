@@ -9,4 +9,3 @@ gulp.task('compress', function (cb) {
     gulp.dest('dist')
   ], cb);
 });
-

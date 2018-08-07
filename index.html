@@ -7,7 +7,9 @@
   </head>
   <body>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-    <script type="text/javascript" src="di.js"></script>
+    <script type="text/javascript" src="dist/di.js"></script>
+    <!-- <script type="text/javascript" src="dist/di.service.js"></script> -->
+	<script type="text/javascript" src="dist/di-mock.service.js"></script>
     <div data-ng-app="dependency-injection">
       <div data-ng-controller="di-controller as vm">The {{::vm.type}} Factory</div>
       <di-component name="Eduard Khil"></di-component>

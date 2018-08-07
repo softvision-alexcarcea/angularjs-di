@@ -1,8 +1,6 @@
 (function(angular) {
   var module = angular.module('dependency-injection', []);
   module.constant('di-value', { title: 'Trololo', url: 'https://www.youtube.com/watch?v=sTSA_sWGM44' });
-  module.service('di-service', function DIService() {
-  });
   module.controller('di-controller', function DIController() {
     this.type = 'Schnitzel';
   });
@@ -14,10 +12,14 @@
     bindings: {
       name: '@'
     },
-    controller: function DIComponent() {
-      this.title = 'TBD Placeholder Title';
-      this.url = 'https://tbd.placeholder.url/';
-    },
-    controllerAs: 'vm'
+    controller: [
+		'di-service',
+		function DIComponent(diService) {
+		  var data = diService.get();
+		  this.title = data.title;
+		  this.url = data.url;
+		}
+	],
+	controllerAs: 'vm'
   });
 })(angular);
