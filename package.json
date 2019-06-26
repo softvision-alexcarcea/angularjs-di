@@ -4,6 +4,7 @@
   "description": "Dependency Injection in AngularJS (1.x)",
   "main": "index.html",
   "scripts": {
+    "start": "http-server ./ -o http://localhost:8080/index.html",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "gulp compress"
   },
@@ -23,8 +24,9 @@
   },
   "homepage": "https://github.com/softvision-alexcarcea/angularjs-di#readme",
   "devDependencies": {
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-uglify": "^3.0.1",
+    "http-server": "^0.11.1",
     "pump": "^3.0.0"
   }
 }
